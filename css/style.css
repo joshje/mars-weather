@@ -59,7 +59,7 @@ img {
 }
 
 .weather-mars .weather-location-inner {
-  background-image: url('/images/mars.jpg');
+  background-image: url('../images/mars.jpg');
 }
 
 .weather-details {
@@ -122,7 +122,7 @@ img {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background: url('/icons/compass.svg') 0 0 no-repeat;
+  background: url('../icons/compass.svg') 0 0 no-repeat;
   background-size: contain;
   margin: 5px 0;
 }
@@ -130,7 +130,7 @@ img {
 .weather-details-wind-arrow {
   width: 30px;
   height: 30px;
-  background: url('/icons/arrow.svg') 0 0 no-repeat;
+  background: url('../icons/arrow.svg') 0 0 no-repeat;
   background-size: contain;
   }
 
