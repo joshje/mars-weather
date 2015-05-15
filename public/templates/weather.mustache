@@ -1,0 +1,22 @@
+<div class="weather-location-inner" {{#bg}}style="background-image:url({{bg}}){{/bg}}">
+<div class="weather-details">
+  <div class="weather-details-location">{{location}}</div>
+
+  {{#weather}}
+  <div class="weather-details-strip">
+    <div class="weather-details-icon"><img src="{{icon}}" alt="{{description}}"></div>
+    <div class="weather-details-temperature">
+      <div class="weather-details-temperature-title">Temperature</div>
+      <div class="weather-details-temperature-text">{{min_temp}}&deg;C <span>to</span> {{max_temp}}&deg;C </div>
+    </div>
+    <div class="weather-details-wind">
+      <div class="weather-details-wind-title">Wind</div>
+      <div class="weather-details-wind-compass">
+        <div class="weather-details-wind-arrow" style="transform: rotate({{wind_direction}}deg)"></div>
+      </div>
+      <div class="weather-details-wind-text">{{wind_speed}}km/h</div>
+    </div>
+  </div>
+  {{/weather}}
+</div>
+</div>

@@ -1,0 +1,16 @@
+{
+  "evil": true,
+  "regexdash": true,
+  "browser": true,
+  "node": true,
+  "wsh": true,
+  "trailing": true,
+  "sub": true,
+  "undef": true,
+  "unused": true,
+  "predef": [
+    "$",
+    "jQuery",
+    "define"
+  ]
+}
