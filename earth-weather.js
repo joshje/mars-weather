@@ -19,7 +19,6 @@ module.exports = function(req, res) {
 
     if (! error && !data.error && response.statusCode == 200) {
       var location = data.nearest_area[0].areaName[0].value + ', ' + data.nearest_area[0].country[0].value;
-      console.log(data.weather[0]);
       res.json({
         type: 'earth',
         location: location,
