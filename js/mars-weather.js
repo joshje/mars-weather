@@ -3,7 +3,7 @@ define([
 ], function (
   renderWeather
 ) {
-  $.ajax('/api/mars')
+  $.ajax('http://mars.joshemerson.co.uk/api/mars')
   .then(function(data) {
     renderWeather(data);
   });

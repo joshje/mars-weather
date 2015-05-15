@@ -9,7 +9,7 @@ define([
     var lat = pos.coords.latitude.toFixed(4),
         lon = pos.coords.longitude.toFixed(4);
 
-    $.ajax('/api/earth?lat=' + lat + '&lon=' + lon)
+    $.ajax('http://mars.joshemerson.co.uk/api/earth?lat=' + lat + '&lon=' + lon)
     .then(function(data) {
       renderWeather(data);
     });
