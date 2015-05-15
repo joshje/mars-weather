@@ -15,6 +15,7 @@ module.exports = function(req, res) {
     }
   }, function (error, response, body) {
     var data = JSON.parse(body).data;
+    res.header('Access-Control-Allow-Origin', 'http://joshje.github.io');
 
     if (! error && !data.error && response.statusCode == 200) {
       var location = data.nearest_area[0].areaName[0].value + ', ' + data.nearest_area[0].country[0].value;

@@ -3,6 +3,7 @@ var weatherIcon = require('./weather-icon');
 
 module.exports = function(req, res) {
   request('http://marsweather.ingenology.com/v1/latest/', function (error, response, body) {
+    res.header('Access-Control-Allow-Origin', 'http://joshje.github.io');
     if (!error && response.statusCode == 200) {
       var data = JSON.parse(body);
       var wind_speed = data.report.wind_speed || 0;
