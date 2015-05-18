@@ -12,5 +12,10 @@
     "bower": "^1.4.1",
     "express": "^4.12.3",
     "request": "^2.55.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-sass": "^2.0.1",
+    "node-bourbon": "^4.2.2"
   }
 }
