@@ -9,7 +9,8 @@ require.config({
 });
 
 require([
+  'jquery',
+  'date',
   'mars-weather',
-  'earth-weather',
-  'jquery'
+  'earth-weather'
 ]);

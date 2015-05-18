@@ -4,7 +4,7 @@ html, body {
   height: 100%; }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: normal; }
 
 img {
@@ -16,18 +16,31 @@ img {
   background: #000;
   color: #FFF;
   font-family: 'Oswald', sans-serif; }
-  .weather-logo {
-    margin: 0;
+  .weather-top {
     position: absolute;
-    width: 100%;
     background: rgba(0, 0, 0, 0.2);
     z-index: 10;
     top: 0;
     left: 0;
     right: 0;
-    padding: 10px; }
-    .weather-logo img {
-      max-width: 200px; }
+    padding: 8px; }
+  .weather-logo {
+    width: 200px;
+    max-width: 45%;
+    margin: 0; }
+  .weather-date {
+    position: absolute;
+    right: 10px;
+    top: 10px; }
+    .weather-date-details {
+      font-size: 0.75em; }
+    .weather-date:before {
+      display: inline-block;
+      content: url("/icons/calendar.svg");
+      width: 14px;
+      height: 14px;
+      margin-right: 5px;
+      opacity: 0.5; }
   .weather-location {
     position: relative;
     width: 50%;
@@ -51,6 +64,13 @@ img {
     bottom: 0;
     padding: 1em;
     background: rgba(0, 0, 0, 0.6); }
+    .weather-details-location:before {
+      display: inline-block;
+      content: url("/icons/location.svg");
+      width: 14px;
+      height: 14px;
+      margin-right: 5px;
+      opacity: 0.5; }
     .weather-details-icon {
       float: left;
       padding: 5px 10px 5px 0; }

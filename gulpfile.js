@@ -8,4 +8,8 @@ gulp.task('css', function () {
     .pipe(gulp.dest('public/css'));
 });
 
+gulp.task('watch', function() {
+  gulp.watch('public/css/*.scss', ['css']);
+});
+
 gulp.task('default', ['css']);
