@@ -32,7 +32,7 @@
 
     &:before {
       display: inline-block;
-      vertical-align: middle;
+      vertical-align: top;
       content: url('/icons/calendar.svg');
       width: 14px;
       height: 14px;
@@ -77,7 +77,7 @@
     &-location {
       &:before {
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: top;
         content: url('/icons/location.svg');
         width: 14px;
         height: 14px;

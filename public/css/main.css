@@ -36,7 +36,7 @@ img {
       font-size: 0.75em; }
     .weather-date:before {
       display: inline-block;
-      vertical-align: middle;
+      vertical-align: top;
       content: url("/icons/calendar.svg");
       width: 14px;
       height: 14px;
@@ -67,7 +67,7 @@ img {
     background: rgba(0, 0, 0, 0.6); }
     .weather-details-location:before {
       display: inline-block;
-      vertical-align: middle;
+      vertical-align: top;
       content: url("/icons/location.svg");
       width: 14px;
       height: 14px;
