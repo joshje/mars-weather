@@ -1,9 +1,14 @@
 .weather {
   position: relative;
   height: 100%;
+  min-height: 300px;
   background: #000;
   color: #FFF;
   font-family: 'Oswald', sans-serif;
+
+  @media all and (max-width: 1000px) {
+    min-height: 480px;
+  }
 
   &-top {
     position: absolute;
@@ -32,10 +37,12 @@
 
     &:before {
       display: inline-block;
-      vertical-align: top;
-      content: url('/icons/calendar.svg');
+      content: '';
+      background: url('/icons/calendar.svg') 50% 50% no-repeat;
       width: 14px;
-      height: 14px;
+      height: 1em;
+      margin-top: -2px;
+      vertical-align: middle;
       margin-right: 5px;
       opacity: 0.5;
     }
@@ -77,10 +84,13 @@
     &-location {
       &:before {
         display: inline-block;
-        vertical-align: top;
-        content: url('/icons/location.svg');
+        height: 1em;
+        content: '';
+        background: url('/icons/location.svg') 50% 50% no-repeat;
         width: 14px;
-        height: 14px;
+        height: 1em;
+        margin-top: -2px;
+        vertical-align: middle;
         margin-right: 5px;
         opacity: 0.5;
       }
