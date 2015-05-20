@@ -75,21 +75,26 @@ a {
     bottom: 0;
     padding: 1em;
     background: rgba(0, 0, 0, 0.6); }
-    .weather-details-location:before {
-      display: inline-block;
-      height: 1em;
-      content: '';
-      background: url("/icons/location.svg") 50% 50% no-repeat;
-      width: 14px;
-      height: 1em;
-      margin-top: -2px;
-      vertical-align: middle;
-      margin-right: 5px;
-      opacity: 0.5; }
+    .weather-details-main {
+      overflow: hidden; }
+    .weather-details-location {
+      float: left; }
+      .weather-details-location:before {
+        display: inline-block;
+        height: 1em;
+        content: '';
+        background: url("/icons/location.svg") 50% 50% no-repeat;
+        width: 14px;
+        height: 1em;
+        margin-top: -2px;
+        vertical-align: middle;
+        margin-right: 5px;
+        opacity: 0.5; }
     .weather-details-attribution {
-      position: absolute;
-      right: 1em;
-      top: 1em; }
+      text-align: right;
+      font-size: 0.75em;
+      padding: 0.166em 0 0.1666em 1em;
+      float: right; }
     .weather-details-icon {
       float: left;
       padding: 5px 10px 5px 0; }

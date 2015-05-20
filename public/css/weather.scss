@@ -77,7 +77,13 @@
     padding: 1em;
     background: rgba(0,0,0,0.6);
 
+    &-main {
+      overflow: hidden;
+    }
+
     &-location {
+      float: left;
+
       &:before {
         display: inline-block;
         height: 1em;
@@ -93,9 +99,10 @@
     }
 
     &-attribution {
-      position: absolute;
-      right: 1em;
-      top: 1em;
+      text-align: right;
+      font-size: 0.75em;
+      padding: 0.166em 0 0.1666em 1em;
+      float: right;
     }
 
     &-icon {
