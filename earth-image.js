@@ -1,4 +1,5 @@
 var request = require('request');
+var Q = require('q');
 var config = require('./config');
 
 var shuffleArray = function(array) {
@@ -11,14 +12,16 @@ var shuffleArray = function(array) {
   return array;
 };
 
-module.exports = function(req, res) {
+module.exports = function(lat, lon) {
+  var deferred = Q.defer();
+
   request({
     url: 'https://api.flickr.com/services/rest/',
     qs: {
       'method': 'flickr.photos.search',
       'api_key': config.flickr.api_key,
-      'lat': req.query.lat,
-      'lon': req.query.lon,
+      'lat': lat,
+      'lon': lon,
       'format': 'json',
       'nojsoncallback': 1,
       'per_page': 10,
@@ -26,7 +29,7 @@ module.exports = function(req, res) {
       'license': '1,2,3,4,5,6,7',
       'sort': 'interestingness-desc',
       'content_type': 1,
-      'extras': 'url_h'
+      'extras': 'url_h,owner_name'
     }
   }, function (error, response, body) {
     if (! error && response.statusCode == 200) {
@@ -35,13 +38,21 @@ module.exports = function(req, res) {
       for (var i = 0; i < photos.length; i++) {
         var photo = photos[i];
         if (photo.url_h) {
-          res.redirect(photo.url_h);
-          return;
+          return deferred.resolve({
+            url: photo.url_h,
+            owner: {
+              name: photo.ownername,
+              url: 'https://www.flickr.com/photos/'+photo.owner+'/'+photo.id
+            }
+          });
         }
       }
+
+      deferred.resolve();
     } else {
-      res.status(response.statusCode);
-      res.send(error);
+      return deferred.reject(new Error(error));
     }
   });
+
+  return deferred.promise;
 };

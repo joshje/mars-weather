@@ -69,10 +69,6 @@
 
   }
 
-  &-mars &-location-inner {
-    background-image: url('/images/mars.jpg');
-  }
-
   &-details {
     position: absolute;
     left: 0;
@@ -94,6 +90,12 @@
         margin-right: 5px;
         opacity: 0.5;
       }
+    }
+
+    &-attribution {
+      position: absolute;
+      right: 1em;
+      top: 1em;
     }
 
     &-icon {

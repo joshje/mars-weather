@@ -1,6 +1,9 @@
-<div class="weather-location-inner" {{#bg}}style="background-image:url({{bg}}){{/bg}}">
+<div class="weather-location-inner" {{#image}}style="background-image:url({{url}}){{/image}}">
 <div class="weather-details">
   <div class="weather-details-location">{{location}}</div>
+  <div class="weather-details-attribution">
+    {{#image.owner}}Photo by <a href="{{url}}">{{name}}</a>{{/image.owner}}
+  </div>
 
   {{#weather}}
   <div class="weather-details-strip">

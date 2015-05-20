@@ -18,6 +18,9 @@ module.exports = function(req, res) {
           wind_direction: wind_direction,
           description: data.report.atmo_opacity,
           icon: weatherIcon.url(data.report.atmo_opacity)
+        },
+        image: {
+          url: '/images/mars.jpg'
         }
       });
     } else {

@@ -12,3 +12,12 @@ h2 {
 img {
   max-width: 100%;
 }
+
+a {
+  color: #FFF;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
